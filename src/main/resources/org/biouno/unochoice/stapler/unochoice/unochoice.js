@@ -419,9 +419,13 @@ var UnoChoice = UnoChoice || (function($) {
                 e.stopImmediatePropagation();
             } else {
                 console.log('Cascading changes from parameter ' + _self.paramName + '...');
-                //jQuery(".behavior-loading").show();
-                //jQuery(_self.cascadeParameter.getParameterElement).loading(true);
-                _self.cascadeParameter.update();
+                //_self.cascadeParameter.loading(true);
+                jQuery(".behavior-loading").show();
+                // start updating in separate async function so browser will be able to repaint and show 'loading' animation , see JENKINS-34487
+                setTimeout(function () {
+                   _self.cascadeParameter.update(); 
+                   jQuery(".behavior-loading").hide();
+                }, 0);
             }
         });
         cascadeParameter.getReferencedParameters().push(this);
