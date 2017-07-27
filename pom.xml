@@ -32,13 +32,6 @@
         <url>https://issues.jenkins-ci.org/secure/IssueNavigator.jspa?reset=true&amp;jqlQuery=project+%3D+JENKINS+AND+status+in+%28Open%2C+"In+Progress"%2C+Reopened%29+AND+component+%3D+${project.artifactId}</url>
     </issueManagement>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <phantomjs.executable>phantomjs</phantomjs.executable>
-        <jenkins.version>1.651.3</jenkins.version>
-        <java.level>6</java.level>
-    </properties>
-
     <scm>
         <connection>scm:git:git://github.com/jenkinsci/active-choices-plugin.git</connection>
         <developerConnection>scm:git:git@github.com:jenkinsci/active-choices-plugin.git</developerConnection>
@@ -59,12 +52,6 @@
     </developers>
 
     <dependencies>
-        <!-- Scriptler is used to eval Groovy parameters -->
-        <dependency>
-            <groupId>org.jenkins-ci.plugins</groupId>
-            <artifactId>scriptler</artifactId>
-            <version>2.9</version>
-        </dependency>
         <!-- JQuery is included only once -->
         <dependency>
             <groupId>org.kohsuke.stapler</groupId>
@@ -114,27 +101,6 @@
                     <excludes>
                         <exclude>InjectedTest.java</exclude>
                     </excludes>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>1.5.0</version>
-                <executions>
-                    <execution>
-                        <id>PhantomJS Unit Testing</id>
-                        <phase>test</phase>
-                        <goals>
-                            <goal>exec</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <executable>${basedir}/src/test/js/runner${file.extension}</executable>
-                    <arguments>
-                        <argument>${basedir}/src/test/js/lib/runner.js</argument>
-                        <argument>${basedir}/src/test/js/lib/tests.html</argument>
-                    </arguments>
                 </configuration>
             </plugin>
         </plugins>

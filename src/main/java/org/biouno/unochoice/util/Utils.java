@@ -37,8 +37,6 @@ import javax.annotation.Nullable;
 import org.apache.commons.lang.ObjectUtils;
 import org.apache.commons.lang.StringUtils;
 import org.biouno.unochoice.AbstractUnoChoiceParameter;
-import org.jenkinsci.plugins.scriptler.config.Script;
-import org.jenkinsci.plugins.scriptler.config.ScriptlerConfiguration;
 
 import hudson.model.ParameterDefinition;
 import hudson.model.ParametersDefinitionProperty;
@@ -58,16 +56,6 @@ import jenkins.model.Jenkins;
 public class Utils {
 
     private Utils() {}
-
-    /**
-     * Returns all scriptler scripts available.
-     *
-     * @return all scriptler scripts available in Jenkins
-     */
-    public static @Nonnull Set<Script> getAllScriptlerScripts() {
-        final Set<Script> scripts = ScriptlerConfiguration.getConfiguration().getScripts();
-        return scripts;
-    }
 
     // --- methods called from Jelly pages
 
