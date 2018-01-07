@@ -192,7 +192,7 @@ public abstract class AbstractUnoChoiceParameter extends SimpleParameterDefiniti
     /**
      * <p>Gets the choice type.</p>
      *
-     * <p>This method can be called from Javascript</p>
+     * <p>This method can be called from JavaScript</p>
      *
      * @return choice type
      */

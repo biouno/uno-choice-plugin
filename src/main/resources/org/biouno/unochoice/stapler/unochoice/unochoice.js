@@ -24,9 +24,9 @@
 'use strict';
 jQuery.noConflict();
 /**
- * <h2>Uno Choice Javascript module.</h2>
+ * <h2>Uno Choice JavaScript module.</h2>
  *
- * <p>This Javascript module is used in Uno-Choice Plug-in, and was created to enable users to have different
+ * <p>This JavaScript module is used in Uno-Choice Plug-in, and was created to enable users to have different
  * types of parameters in Jenkins.</p>
  *
  * <p>In Jenkins parameters are used to customize Job variables. However, the range of parameters and their
