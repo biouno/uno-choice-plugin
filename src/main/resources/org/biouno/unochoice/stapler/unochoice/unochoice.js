@@ -907,7 +907,7 @@ var UnoChoice = UnoChoice || (function($) {
     /**
      * <p>This function is the same as makeStaplerProxy available in Jenkins core, but executes calls
      * <strong>synchronously</strong>. Since many parameters must be filled only after other parameters have been
-     * updated, calling Jenkins methods assynchronously causes several unpredictable errors.</p>
+     * updated, calling Jenkins methods asynchronously causes several unpredictable errors.</p>
      */
     /* public */ function makeStaplerProxy2(url, crumb, methods) {
         if (url.substring(url.length - 1) !== '/') url+='/';
