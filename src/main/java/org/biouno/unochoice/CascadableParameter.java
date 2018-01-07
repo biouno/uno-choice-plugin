@@ -53,7 +53,7 @@ public interface CascadableParameter<T> extends ScriptableParameter<T> {
     public List<Object> getChoicesForUI();
 
     /**
-     * Exposed to the UI. Is triggered everytime any of the referenced parameters gets updated.
+     * Exposed to the UI. Is triggered every time any of the referenced parameters gets updated.
      * @param parameters Comma separated list of parameters
      */
     public void doUpdate(String parameters);
