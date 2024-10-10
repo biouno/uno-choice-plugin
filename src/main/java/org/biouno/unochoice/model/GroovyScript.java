@@ -167,10 +167,10 @@ public class GroovyScript extends AbstractScript {
         // @SuppressWarnings("unchecked")
         final Map<String, String> envVars = System.getenv();
         for (Entry<String, String> parameter : parameters.entrySet()) {
-            Object value = parameter.getValue();
+            String value = parameter.getValue();
             if (value != null) {
                 if (value instanceof String) {
-                    value = Util.replaceMacro((String) value, envVars);
+                    value = Util.replaceMacro(value, envVars);
                 }
                 context.setVariable(parameter.getKey(), value);
             }
